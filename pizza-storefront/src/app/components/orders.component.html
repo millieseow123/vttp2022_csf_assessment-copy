@@ -1,0 +1,25 @@
+<div class="box-it">
+    <tr *ngIf="orders.length <= 0">
+        <h2>You have no orders</h2>
+    </tr>
+    <table>
+        <tr>
+            <td>
+                Orders for {{ email }}
+            </td>
+        </tr>
+        <tr>
+            <div class="order-box" *ngFor="let o of orders">
+                <!-- <td>{{ o.orderId }}</td> -->
+                <!-- <td>{{ o.total }}</td> -->
+            </div>
+        </tr>
+        <tr>
+            <td>
+                <div class="justify-right">
+                    <button type="button" [routerLink]="['/']">Back to Ordering</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
